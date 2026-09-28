@@ -50,7 +50,7 @@ export function ProductCard({ product, delay = 0 }: { product: Product; delay?: 
           ) : null}
 
           <Button asChild variant="field" size="lg" className="mt-7 w-full">
-            <Link to="/contacto" hash="cotizacion" search={{ producto: product.name }}>
+            <Link to="/contacto" hash="cotizacion">
               {product.ctaLabel}
               <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
