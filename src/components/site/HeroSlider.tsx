@@ -13,7 +13,7 @@ type Slide = {
   eyebrow: string;
   title: string;
   text?: string;
-  actions: { label: string; to: string; hash?: string; variant: "hero" | "onImage" }[];
+  actions: { label: string; to: "/" | "/productos" | "/quienes-somos" | "/contacto"; hash?: string; variant: "hero" | "onImage" }[];
 };
 
 const slides: Slide[] = [
@@ -127,7 +127,7 @@ export function HeroSlider() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               {slide.actions.map((action) => (
                 <Button key={action.label} asChild variant={action.variant} size="lg">
-                  <Link to={action.to} hash={action.hash}>
+                  <Link to={action.to} {...(action.hash ? { hash: action.hash } : {})}>
                     {action.label}
                   </Link>
                 </Button>

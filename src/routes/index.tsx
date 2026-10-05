@@ -102,7 +102,7 @@ function Index() {
           <SectionTitle eyebrow="¿Por qué elegirnos?" title="Razones para confiar en nosotros" align="center" />
           <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {reasons.map((reason, i) => {
-              const Icon = reasonIcons[i % reasonIcons.length];
+              const Icon = reasonIcons[i % reasonIcons.length]!;
               return (
                 <Reveal as="li" key={reason.title} delay={i * 80}>
                   <div className="h-full border-t-2 border-gold pt-6">
