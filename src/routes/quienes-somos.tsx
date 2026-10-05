@@ -142,7 +142,7 @@ function AboutPage() {
           <SectionTitle eyebrow="Responsabilidad" title="Nuestro compromiso" align="center" />
           <div className="mt-14 grid gap-8 md:grid-cols-3">
             {commitments.map((c, i) => {
-              const Icon = commitmentIcons[i];
+              const Icon = commitmentIcons[i]!;
               return (
                 <Reveal key={c.title} delay={i * 100}>
                   <div className="text-center">

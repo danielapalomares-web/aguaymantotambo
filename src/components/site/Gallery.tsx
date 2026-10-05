@@ -72,12 +72,12 @@ export function Gallery() {
           </button>
           <figure className="max-h-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
             <img
-              src={images[active].src}
-              alt={images[active].alt}
+              src={images[active]!.src}
+              alt={images[active]!.alt}
               className="max-h-[75vh] w-full rounded-xl object-contain"
             />
             <figcaption className="mt-4 text-center text-sm text-primary-foreground/80">
-              {images[active].alt}
+              {images[active]!.alt}
             </figcaption>
           </figure>
         </div>
