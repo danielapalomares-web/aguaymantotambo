@@ -82,7 +82,7 @@ export function Header() {
                 <Link
                   to={item.to}
                   className={cn(
-                    "flex items-center gap-1 rounded-md px-3 py-2 text-sm font-semibold transition-colors",
+                    "flex items-center gap-1 whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-semibold transition-colors",
                     scrolled
                       ? active
                         ? "text-accent"
@@ -126,7 +126,7 @@ export function Header() {
           <a
             href={site.contact.phoneHref}
             className={cn(
-              "flex items-center gap-2 text-sm font-semibold transition-colors",
+              "hidden items-center gap-2 text-sm font-semibold transition-colors xl:flex",
               scrolled ? "text-primary hover:text-accent" : "text-primary-foreground/90 hover:text-gold-soft",
             )}
           >
