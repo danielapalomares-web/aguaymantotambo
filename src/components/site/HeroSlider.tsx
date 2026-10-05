@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import heroAguaymanto from "@/assets/hero-aguaymanto.jpg";
@@ -48,6 +48,14 @@ const slides: Slide[] = [
 export function HeroSlider() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [videoOpen, setVideoOpen] = useState(false);
+
+  useEffect(() => {
+    if (!videoOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setVideoOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [videoOpen]);
 
   const go = useCallback((next: number) => {
     setIndex(((next % slides.length) + slides.length) % slides.length);
@@ -133,6 +141,19 @@ export function HeroSlider() {
                 </Button>
               ))}
             </div>
+            <button
+              type="button"
+              onClick={() => {
+                setPaused(true);
+                setVideoOpen(true);
+              }}
+              className="group mt-6 inline-flex items-center gap-3 text-primary-foreground"
+            >
+              <span className="grid size-12 place-items-center rounded-full bg-gold text-primary-deep shadow-lg transition-transform group-hover:scale-110">
+                <Play className="ml-0.5 size-5 fill-current" />
+              </span>
+              <span className="text-sm font-semibold tracking-wide">Ver video</span>
+            </button>
           </div>
         ))}
 
@@ -175,6 +196,33 @@ export function HeroSlider() {
           </div>
         </div>
       </div>
+      {videoOpen ? (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Video sobre el aguaymanto"
+          className="fixed inset-0 z-[100] bg-foreground"
+        >
+          <iframe
+            className="size-full"
+            src="https://www.youtube-nocookie.com/embed/ZUMW1HGJFEU?autoplay=1&rel=0"
+            title="Video sobre el aguaymanto"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
+          <button
+            type="button"
+            onClick={() => {
+              setVideoOpen(false);
+              setPaused(false);
+            }}
+            aria-label="Cerrar video"
+            className="absolute top-4 right-4 grid size-11 place-items-center rounded-full bg-background text-foreground shadow-lg"
+          >
+            <X className="size-5" />
+          </button>
+        </div>
+      ) : null}
     </section>
   );
 }
