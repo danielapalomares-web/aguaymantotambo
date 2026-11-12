@@ -12,15 +12,15 @@ export const site = {
     "Producción y comercialización de aguaymanto peruano seleccionado para clientes particulares, restaurantes, tiendas, distribuidores y compradores mayoristas.",
 
   contact: {
-    phoneDisplay: "[TELÉFONO]",
-    phoneHref: "tel:+51000000000",
-    whatsappDisplay: "[WHATSAPP]",
+    phoneDisplay: "+51 980437076",
+    phoneHref: "tel:+51980437076",
+    whatsappDisplay: "+51 980437076",
     /** Solo dígitos, con código de país. Cambia este número para todo el sitio. */
-    whatsappNumber: "51000000000",
-    email: "[CORREO]",
-    address: "[DIRECCIÓN]",
-    city: "[CIUDAD]",
-    schedule: "[HORARIO DE ATENCIÓN]",
+    whatsappNumber: "51980437076",
+    email: "contactos@aguaymantotambo.com",
+    address: "Sauceda Alta S/N Limatambo -Anta -Cusco",
+    city: "",
+    schedule: "Lunes a viernes 9:00 am a 1:00pm -2:00pm a 5:00pm",
   },
 
   whatsapp: {

@@ -30,7 +30,7 @@ const channels = [
   { Icon: MessageCircle, label: "WhatsApp", value: site.contact.whatsappDisplay, href: whatsappLink(), external: true },
   { Icon: Phone, label: "Teléfono", value: site.contact.phoneDisplay, href: site.contact.phoneHref },
   { Icon: Mail, label: "Correo electrónico", value: site.contact.email },
-  { Icon: MapPin, label: "Dirección", value: `${site.contact.address}, ${site.contact.city}` },
+  { Icon: MapPin, label: "Dirección", value: [site.contact.address, site.contact.city].filter(Boolean).join(", ") },
   { Icon: Clock, label: "Horario de atención", value: site.contact.schedule },
 ];
 

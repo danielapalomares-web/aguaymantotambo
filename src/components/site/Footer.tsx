@@ -86,7 +86,7 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" />
-              {site.contact.address}, {site.contact.city}
+              {site.contact.address}{site.contact.city ? `, ${site.contact.city}` : ""}
             </li>
             <li className="flex items-start gap-3">
               <Clock className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" />
