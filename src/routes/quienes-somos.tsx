@@ -80,7 +80,7 @@ function AboutPage() {
       {/* Historia */}
       <section id="historia" className="bg-muted/60 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionTitle eyebrow="Trayectoria" title="Nuestra historia" align="center" />
+          <SectionTitle eyebrow="Recorrido" title="Nuestra historia" align="center" />
           <ol className="relative mt-16 grid gap-10 md:grid-cols-4 md:gap-6">
             <span
               className="absolute top-6 right-0 left-0 hidden h-px bg-gold/50 md:block"
