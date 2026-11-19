@@ -38,7 +38,7 @@ function AboutPage() {
     <>
       <PageHero
         eyebrow="Quiénes somos"
-        title="Una empresa con raíces en el campo peruano"
+        title="Una empresa con raíces en el campo peruano."
         text="Producimos y comercializamos aguaymanto con compromiso, responsabilidad y visión de crecimiento."
         image={heroCampos}
         imageAlt="Valle andino con plantaciones de aguaymanto"
@@ -47,7 +47,7 @@ function AboutPage() {
       {/* Nuestra empresa */}
       <section id="empresa" className="py-20 lg:py-28">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
-          <SectionTitle eyebrow="Nuestra empresa" title="Del campo peruano a la mesa de nuestros clientes">
+          <SectionTitle eyebrow="Nuestra empresa exitosa" title="Del campo peruano a la mesa de nuestros clientes">
             <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
                 Somos una empresa peruana dedicada a la producción y comercialización de aguaymanto.
