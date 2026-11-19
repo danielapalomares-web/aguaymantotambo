@@ -127,7 +127,7 @@ function AboutPage() {
       {/* Valores */}
       <section id="valores" className="bg-muted/60 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionTitle eyebrow="Lo que nos guía" title="Nuestros valores" />
+          <SectionTitle eyebrow="Lo que nos guía para mejor atencion" title="Nuestros valores" />
           <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((value, i) => (
               <ValueCard key={value.name} name={value.name} text={value.text} delay={i * 70} />
